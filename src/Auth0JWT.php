@@ -14,10 +14,10 @@ use Auth0\SDK\Exception\ApiException;
 class Auth0JWT {
 
     public static function decode($jwt, $client_id, $client_secret) {
-
-        $secret = base64_decode(strtr($client_secret, '-_', '+/'));
+      
+        //$secret = base64_decode(strtr($client_secret, '-_', '+/'));
         // for PROD
-        //$secret=$client_secret;
+        $secret=$client_secret;
 
         try {
             // Decode the user
