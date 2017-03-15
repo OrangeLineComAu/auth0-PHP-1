@@ -238,6 +238,7 @@ class Auth0 {
         ));
 
         // Parse it
+        $auth0_response_original = $auth0_response;
         $auth0_response = $auth0_response['result'];
         $this->debugInfo(json_encode($auth0_response));
         $access_token = (isset($auth0_response['access_token']))? $auth0_response['access_token'] : false;
